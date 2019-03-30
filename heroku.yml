@@ -4,3 +4,6 @@ build:
     release:
       dockerfile: Dockerfile
       target: builder
+release:
+  command:
+    - ./run_migrations.sh
