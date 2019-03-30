@@ -2,6 +2,7 @@ FROM hasura/graphql-engine:v1.0.0-alpha41.cli-migrations as builder
 COPY ./migrations /heroku-migrations
 COPY ./run_migrations.sh /
 ENTRYPOINT ["/bin/sh", "-c", "./run_migrations.sh"]
+CMD ["/bin/sh", "-c", "./run_migrations.sh"]
 
 FROM hasura/graphql-engine:v1.0.0-alpha41 as production
 
