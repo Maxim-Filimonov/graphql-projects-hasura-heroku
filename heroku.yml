@@ -1,8 +1,10 @@
 build:
   docker:
     web: Dockerfile
+    worker:
+      dockerfile: Dockerfile
+      target: builder
 release:
-  dockerfile: Dockerfile
-  target: builder
+  image: worker
   command:
     - ./run_migrations.sh
