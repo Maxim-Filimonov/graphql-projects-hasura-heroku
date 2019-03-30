@@ -1,4 +1,7 @@
-FROM hasura/graphql-engine:v1.0.0-alpha41
+FROM hasura/graphql-engine:v1.0.0-alpha41.cli-migrations as builder
+COPY ./migrations /heroku-migrations
+
+FROM hasura/graphql-engine:v1.0.0-alpha41 as production
 
 # Disable the console
 ENV HASURA_GRAPHQL_ENABLE_CONSOLE=false
