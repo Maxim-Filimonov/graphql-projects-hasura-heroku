@@ -1,6 +1,7 @@
 FROM hasura/graphql-engine:v1.0.0-alpha41.cli-migrations as builder
 COPY ./migrations /heroku-migrations
 RUN export HASURA_GRAPHQL_DATABASE_URL=$DATABASE_URL
+RUN env
 
 FROM hasura/graphql-engine:v1.0.0-alpha41 as production
 
