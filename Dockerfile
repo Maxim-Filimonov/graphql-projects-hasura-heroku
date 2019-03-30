@@ -1,7 +1,8 @@
 FROM hasura/graphql-engine:v1.0.0-alpha41
 
-# Enable the console
-ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
+# Disable the console
+ENV HASURA_GRAPHQL_ENABLE_CONSOLE=false
+ENV HASURA_GRAPHQL_ADMIN_SECRET=packt_secret
 
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
