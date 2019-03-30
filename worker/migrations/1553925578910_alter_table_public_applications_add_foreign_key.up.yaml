@@ -1,0 +1,4 @@
+- args:
+    sql: ALTER TABLE "public"."applications" ADD FOREIGN KEY ("stage_id") REFERENCES
+      "public"."stages" ("stage_id")
+  type: run_sql
