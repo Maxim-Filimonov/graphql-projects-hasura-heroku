@@ -1,10 +1,10 @@
 build:
   docker:
     web: Dockerfile
-    release:
+    worker:
       dockerfile: Dockerfile
       target: builder
-# release:
-#   image: worker
-#   command:
-#     - ./run_migrations.sh
+release:
+  image: worker
+  command:
+    - ./run_migrations.sh
