@@ -6,12 +6,13 @@ CMD ["/bin/sh", "-c", "./run_migrations.sh"]
 
 FROM hasura/graphql-engine:v1.0.0-alpha41 as production
 
+ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
 CMD graphql-engine \
-    --database-url $DATABASE_URL \
-    serve \
-    --server-port $PORT
+  --database-url $DATABASE_URL \
+  serve \
+  --server-port $PORT
 
 ## Comment the command above and use the command below to
 ## enable an access-key and an auth-hook
