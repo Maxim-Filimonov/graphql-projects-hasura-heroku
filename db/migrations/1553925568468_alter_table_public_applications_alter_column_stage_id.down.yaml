@@ -1,3 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."applications" ALTER COLUMN "stage_id" TYPE integer;
-  type: run_sql

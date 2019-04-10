@@ -1,0 +1,42 @@
+- args:
+    relationship: applicant
+    table:
+      name: experiences
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: job_skills
+    table:
+      name: jobs
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: job
+    table:
+      name: job_skills
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: skill
+    table:
+      name: job_skills
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: job_skills
+    table:
+      name: skills
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: skills_experiences
+    table:
+      name: skills
+      schema: public
+  type: drop_relationship
+- args:
+    relationship: experience
+    table:
+      name: skills_experiences
+      schema: public
+  type: drop_relationship

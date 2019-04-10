@@ -1,0 +1,8 @@
+- args:
+    name: skill
+    table:
+      name: skills_experiences
+      schema: public
+    using:
+      foreign_key_constraint_on: skill_id
+  type: create_object_relationship

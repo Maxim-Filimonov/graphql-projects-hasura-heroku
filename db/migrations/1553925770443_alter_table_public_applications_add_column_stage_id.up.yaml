@@ -1,3 +1,0 @@
-- args:
-    sql: ALTER TABLE "public"."applications" ADD COLUMN "stage_id" text NOT NULL
-  type: run_sql

@@ -1,0 +1,5 @@
+- args:
+    sql: alter table "public"."experiences" add constraint experiences_application_id_fkey
+      foreign key ("application_id") references "applicants"("id") on update restrict
+      on delete restrict;
+  type: run_sql

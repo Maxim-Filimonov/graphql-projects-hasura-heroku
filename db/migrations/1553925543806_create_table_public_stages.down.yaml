@@ -1,3 +1,0 @@
-- args:
-    sql: DROP TABLE "public"."stages"
-  type: run_sql
