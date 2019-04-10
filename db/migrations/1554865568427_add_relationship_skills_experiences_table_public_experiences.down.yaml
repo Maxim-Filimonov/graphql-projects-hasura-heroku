@@ -1,6 +1,0 @@
-- args:
-    relationship: skills_experiences
-    table:
-      name: experiences
-      schema: public
-  type: drop_relationship

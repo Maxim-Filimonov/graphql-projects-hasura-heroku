@@ -1,9 +1,0 @@
-- args:
-    sql: CREATE TABLE "public"."experiences"("id" serial NOT NULL, "application_id"
-      integer NOT NULL, "company" text NOT NULL, "lenght_in_months" integer NOT NULL,
-      PRIMARY KEY ("id") );
-  type: run_sql
-- args:
-    name: experiences
-    schema: public
-  type: add_existing_table_or_view

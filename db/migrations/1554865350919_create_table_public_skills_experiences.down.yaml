@@ -1,3 +1,0 @@
-- args:
-    sql: DROP TABLE "public"."skills_experiences"
-  type: run_sql

@@ -1,6 +1,0 @@
-- args:
-    relationship: experiences
-    table:
-      name: applicants
-      schema: public
-  type: drop_relationship

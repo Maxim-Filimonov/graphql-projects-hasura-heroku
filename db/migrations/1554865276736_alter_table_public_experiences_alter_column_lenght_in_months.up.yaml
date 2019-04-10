@@ -1,3 +1,0 @@
-- args:
-    sql: alter table "public"."experiences" rename column "lenght_in_months" to "length_in_months";
-  type: run_sql
