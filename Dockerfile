@@ -1,15 +1,18 @@
-FROM hasura/graphql-engine:v1.0.0-alpha41
+FROM hasura/graphql-engine:v1.0.0-alpha42.cli-migrations as builder
+COPY ./db/migrations /hasura-migrations
+COPY ./run_migrations.sh /
+ENTRYPOINT ["/bin/sh", "-c", "./run_migrations.sh"]
+CMD ["/bin/sh", "-c", "./run_migrations.sh"]
 
-# Disable the console
-ENV HASURA_GRAPHQL_ENABLE_CONSOLE=false
-ENV HASURA_GRAPHQL_ADMIN_SECRET=packt_secret
+FROM hasura/graphql-engine:v1.0.0-alpha42 as production
 
+ENV HASURA_GRAPHQL_ENABLE_CONSOLE=true
 # Change $DATABASE_URL to your heroku postgres URL if you're not using
 # the primary postgres instance in your app
 CMD graphql-engine \
-    --database-url $DATABASE_URL \
-    serve \
-    --server-port $PORT
+  --database-url $DATABASE_URL \
+  serve \
+  --server-port $PORT
 
 ## Comment the command above and use the command below to
 ## enable an access-key and an auth-hook
